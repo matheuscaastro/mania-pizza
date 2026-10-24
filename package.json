@@ -1,0 +1,23 @@
+{
+  "name": "mania-de-pizza",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Sistema de gestão da pizzaria Mania de Pizza: painel do admin, app do garçom e entregador, cozinha e API.",
+  "workspaces": [
+    "shared",
+    "api",
+    "web-admin",
+    "web-garcom"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev -w api",
+    "dev:admin": "npm run dev -w web-admin",
+    "dev:garcom": "npm run dev -w web-garcom",
+    "build": "npm run build -w api && npm run build -w web-admin && npm run build -w web-garcom",
+    "typecheck": "npm run typecheck -w shared && npm run typecheck -w api && npm run typecheck -w web-admin && npm run typecheck -w web-garcom",
+    "test": "npm run test -w api"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
